@@ -4,11 +4,11 @@
     </span>
     <nav id="menu" [class.active]="isActive">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#">Lorem</a></li>
-            <li><a href="#">Lorem</a></li>
+            <li (click)="toggleNavigation()"><a href="#">Home</a></li>
+            <li (click)="toggleNavigation()"><a href="#about">About</a></li>
+            <li (click)="toggleNavigation()"><a href="#contact">Contact</a></li>
+            <li (click)="toggleNavigation()"><a href="#">Lorem</a></li>
+            <li (click)="toggleNavigation()"><a href="#">Lorem</a></li>
         </ul>
     </nav>
 </div>

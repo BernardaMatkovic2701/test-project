@@ -9,11 +9,17 @@ import {Component} from '@angular/core';
 export class NavComponent {
 
     isActive = false;
+    innerWidth: any;
 
     constructor() {
     }
 
     toggleNavigation(): void {
-        this.isActive = !this.isActive;
+
+        this.innerWidth = window.innerWidth;
+
+        if (this.innerWidth < 768) {
+            this.isActive = !this.isActive;
+        }
     }
 }

@@ -7,55 +7,71 @@ span.menu-link {
     }
   }
 
-nav {
-    clear: both;
-    -webkit-transition: all 0.3s ease-out;  
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    overflow: hidden;
-    display: none;
-    background-color: #000000;
+.main-navigation {
+    height: 40px;
 
-    &.active {
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 40px;
-        bottom: 0;
-    }
+    nav {
+        clear: both;
+        -webkit-transition: all 0.3s ease-out;  
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        overflow: hidden;
+        display: none;
+        background-color: #000000;
 
-    ul {
-        margin: 0;
-        padding: 0;
-        text-align: center;
+        &.active {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 40px;
+            bottom: 0;
+        }
 
-        li {
-            a {
-                display: block;
-                padding: 10px;
-                text-decoration: none;
-                color: #ffffff;
-                text-transform: uppercase;
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            li {
+                a {
+                    display: block;
+                    padding: 10px;
+                    text-decoration: none;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                }
             }
         }
     }
+
 }
   
 @media screen and (min-width: 768px) {
     span.menu-link {
         display: none;
     }
+    .main-navigation {
+        nav {
+            display: block;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: unset;
 
-    nav {
-        display: block;
+            &.active {
+                top: 0;
+                bottom: unset;
+            }
 
-        ul {
+            ul {
 
-            li {
-                display: inline-block;
+                li {
+                    display: inline-block;
+                }
             }
         }
     }

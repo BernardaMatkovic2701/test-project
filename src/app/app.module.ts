@@ -7,17 +7,24 @@ import {AppComponent} from './app.component';
 import {MainComponent} from './modules/main/main.component';
 import {NavComponent} from './modules/navigation/nav.component';
 import {HomePageComponent} from './modules/home-page/home-page.component';
+import {FormComponent} from './modules/form/form.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [
         AppComponent,
         MainComponent,
         NavComponent,
-        HomePageComponent
+        HomePageComponent,
+        FormComponent
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        ReactiveFormsModule
+    ],
+    exports: [
+        ReactiveFormsModule
     ],
     providers: [],
     bootstrap: [
