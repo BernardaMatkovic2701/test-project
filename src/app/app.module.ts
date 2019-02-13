@@ -9,6 +9,7 @@ import {NavComponent} from './modules/navigation/nav.component';
 import {HomePageComponent} from './modules/home-page/home-page.component';
 import {FormComponent} from './modules/form/form.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
     ],
     exports: [
         ReactiveFormsModule

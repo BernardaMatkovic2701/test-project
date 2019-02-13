@@ -6,23 +6,13 @@
         <div class="form-item">
             <label for="email">Email*</label>
             <input formControlName="email" class="form-control" type="email" name="email" />
-            <div class="error-message" *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].hasError('required')">
-                Email is required.
-            </div>
-            <div class="error-message" *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].hasError('email')">
-                Email is not valid.
-            </div>
+            <div class="error-message">{{errEmailMessage}}</div>
         </div>
 
         <div class="form-item">
             <label for="message">Message*</label>
             <input formControlName="message" class="form-control" type="text" name="message" />
-            <div class="error-message" *ngIf="contactForm.controls['message'].touched && contactForm.controls['message'].hasError('minlength')">
-                Message have to contain at least 30 characters.
-            </div>
-            <div class="error-message" *ngIf="contactForm.controls['message'].touched && contactForm.controls['message'].hasError('required')">
-                Message is required.
-            </div>
+            <div class="error-message">{{errMessage}}</div>
         </div>
 
         <button class="submit-button" type="submit" [disabled]="!contactForm.valid">
